@@ -1,6 +1,6 @@
 # NodeMR
 
-A mapreduce framework by NodeJS.
+A MapReduce framework by NodeJS.
 ### Technology Dependencies
 
 * NodeJS 7.x

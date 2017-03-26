@@ -1,0 +1,22 @@
+
+{
+  "name": "nodemr",
+  "version": "0.0.1",
+  "description": "MapReduce framework",
+  "main": "lib/app.js",
+  "repository": "ZeFanQiu/NodeMR",
+  "keywords": [
+    "mapreduce"
+  ],
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">= 7.0.0"
+  },
+  "files": [
+    "lib"
+  ]
+}
