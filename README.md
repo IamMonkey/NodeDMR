@@ -1,4 +1,4 @@
-# NodeMR--Creating...
+# NodeMR
 
 A mapreduce framework by NodeJS.
 ### Technology Dependencies
