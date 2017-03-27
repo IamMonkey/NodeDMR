@@ -1,3 +1,4 @@
+let begin=new Date().getTime()
 const fs=require('fs');
 
 const txt = fs.readFileSync('./workcount.txt','utf-8');
@@ -6,10 +7,13 @@ delete txt;
 const map = new Map();
 wordList.map(item=>{
     let itemcount=map.get(item);
-    itemcount=itemcount?++itemcount:1;
-    map.set(item,itemcount);
+    map.set(item,itemcount?++itemcount:1);
 })
 
 for (let [key, value] of map) {
   console.log(key, value);
 }
+
+let end=new Date().getTime()
+
+console.log(end-begin)
