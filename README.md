@@ -5,5 +5,3 @@ A like MapReduce framework by NodeJS.
 
 * NodeJS 7.x
 * socket.io
-* redis
-* mongodb
