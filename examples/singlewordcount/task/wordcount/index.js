@@ -2,7 +2,6 @@ const fs= require('fs');
 const path= require('path');
 
 exports.dipatch=function(){
-    console.log(path.join(__dirname,'./wordcount.txt'))
     const txt = fs.readFileSync(path.join(__dirname,'./wordcount.txt'),'utf-8');
     return txt.replace(/\n/g,' ').replace(/^\s\s*/, ' ').replace(/\s\s*$/, ' ').toLowerCase().split(' ')
 }
