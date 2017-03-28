@@ -12,11 +12,14 @@ exports.map=function(workList){
         let itemcount=map.get(item);
         map.set(item,itemcount?++itemcount:1);
     })
-    return map;
+    return [...map];
 }
 
 exports.reduce=function(result){
+    const map = new Map();
     for (let [key, value] of result) {
-      console.log(key, value);
+        let itemcount=map.get(key);
+        map.set(key,itemcount?itemcount+value:value);
     }
+    console.log(map)
 }
