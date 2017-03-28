@@ -1,9 +1,10 @@
 const fs= require('fs');
 const path= require('path');
 
+
 exports.dipatch=function(){//do in master
     const txt = fs.readFileSync(path.join(__dirname,'./wordcount.txt'),'utf-8');
-    return txt.replace(/\n/g,' ').replace(/^\s\s*/, ' ').replace(/\s\s*$/, ' ').toLowerCase().split(' ')
+    return txt.replace(/\r\n/g,' ').replace(/\s+/g,' ').toLowerCase().split(' ')
 }
 
 exports.map=function(workList){//do in slave or master
