@@ -1,7 +1,7 @@
 let begin=new Date().getTime()
 const fs=require('fs');
 
-const txt = fs.readFileSync('./workcount.txt','utf-8');
+const txt = fs.readFileSync('./wordcount.txt','utf-8');
 const wordList=txt.replace(/\n/g,' ').replace(/^\s\s*/, ' ').replace(/\s\s*$/, ' ').toLowerCase().split(' ')
 delete txt;
 const map = new Map();
