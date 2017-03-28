@@ -1,12 +1,12 @@
 const fs= require('fs');
 const path= require('path');
 
-exports.dipatch=function(){
+exports.dipatch=function(){//do in master
     const txt = fs.readFileSync(path.join(__dirname,'./wordcount.txt'),'utf-8');
     return txt.replace(/\n/g,' ').replace(/^\s\s*/, ' ').replace(/\s\s*$/, ' ').toLowerCase().split(' ')
 }
 
-exports.map=function(workList){
+exports.map=function(workList){//do in slave or master
     const map = new Map();
     workList.map(item=>{
         let itemcount=map.get(item);
@@ -15,7 +15,7 @@ exports.map=function(workList){
     return [...map];
 }
 
-exports.reduce=function(result){
+exports.reduce=function(result){//do in master
     const map = new Map();
     for (let [key, value] of result) {
         let itemcount=map.get(key);
