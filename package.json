@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "MapReduce framework",
   "main": "lib/app.js",
-  "repository": "ZeFanQiu/NodeMR",
+  "repository": "IamMonkey/NodeDMR",
   "keywords": [
       "mapreduce",
       "nodejs",
